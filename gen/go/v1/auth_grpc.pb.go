@@ -4,7 +4,7 @@
 // - protoc             v5.28.0
 // source: v1/auth.proto
 
-package v1
+package auth
 
 import (
 	context "context"
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Auth_Register_FullMethodName = "/com.mininetwork.authservice.v1.Auth/Register"
-	Auth_Login_FullMethodName    = "/com.mininetwork.authservice.v1.Auth/Login"
+	Auth_Register_FullMethodName = "/com.mininetwork.api.v1.auth.Auth/Register"
+	Auth_Login_FullMethodName    = "/com.mininetwork.api.v1.auth.Auth/Login"
 )
 
 // AuthClient is the client API for Auth service.
@@ -146,7 +146,7 @@ func _Auth_Login_Handler(srv interface{}, ctx context.Context, dec func(interfac
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Auth_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "com.mininetwork.authservice.v1.Auth",
+	ServiceName: "com.mininetwork.api.v1.auth.Auth",
 	HandlerType: (*AuthServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
